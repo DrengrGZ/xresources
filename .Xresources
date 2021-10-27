@@ -1,0 +1,177 @@
+!--------------------
+!xtermconfig
+!--------------------
+!general
+xterm*faceName: SourceCodePro 
+xterm*faceSize: 11
+xterm*loginShell: true
+xterm*vt100*geometry: 120x35
+xterm*saveLines: 50000
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName: xterm-color
+xterm*eightBitInput: false
+xterm*savelines: 2000
+
+!color
+xterm*foreground: rgb:f9/f9/f9
+xterm*background: rgb:22/22/22
+xterm*color0: rgb:3f/3f/3f
+xterm*color1: rgb:cc/00/00
+xterm*color2: rgb:4e/9a/06
+xterm*color3: rgb:c4/a0/00
+xterm*color4: rgb:34/65/a4
+xterm*color5: rgb:ad/6a/b8
+xterm*color6: rgb:06/98/9a
+xterm*color7: rgb:dc/dc/cc
+xterm*color8: rgb:54/54/54
+xterm*color9: rgb:fc/54/54
+xterm*color10: rgb:8a/e2/34
+xterm*color11: rgb:fc/e9/4f
+xterm*color12: rgb:94/bf/f3
+xterm*color13: rgb:dc/95/e8
+xterm*color14: rgb:93/e0/e3
+xterm*color15: rgb:ff/ff/ff
+xterm*boldMode: false
+xterm*colorBDMode: true
+xterm*colorBD: rgb:ff/ff/ff
+
+!scroll
+
+!clipboard
+xterm*selectToClipboard: true
+
+!---------------------
+!	st
+!---------------------
+!! Transparency (0-1)
+st.alpha: 1
+st.alphaOffset: 0
+
+!!font 
+st.font: SourceCodePro-11;
+
+! st.termname: st-256color
+! st.borderpx: 2
+
+!! themes
+
+!!drengrxterm
+*.color0:#3f3f3f
+*.color1:#cc0000
+*.color2:#4e9a06
+*.color3:#c4a000
+*.color4:#3465a4
+*.color5:#ad6ab8
+*.color6:#06989a
+*.color7:#dcdccc
+*.color8:#545454
+*.color9:#fc5454
+*.color10:#8ae234
+*.color11:#fce94f
+*.color12:#94bff3
+*.color13:#dc95e8
+*.color14:#93e0e3
+*.color15:#ffffff
+*.background:#222222
+*.foreground:#f9f9f9 
+*.cursorColor: white 
+
+!! gruvbox:
+/* *.color0: #1d2021 */
+/* *.color1: #cc241d */
+/* *.color2: #98971a */ 
+/* *.color3: #d79921 */
+/* *.color4: #458588 */
+/* *.color5: #b16286 */
+/* *.color6: #689d6a */
+/* *.color7: #a89984 */
+/* *.color8: #928374 */
+/* *.color9: #fb4934 */
+/* *.color10: #b8bb26 */
+/* *.color11: #fabd2f */
+/* *.color12: #83a598 */
+/* *.color13: #d3869b */
+/* *.color14: #8ec07c */
+/* *.color15: #ebdbb2 */
+/* *.background: #282828 */
+/* *.foreground: white */
+/* *.cursorColor: white */
+
+/* !! brogrammer: */
+/* *.foreground:  #d6dbe5 */
+/* *.background:  #131313 */
+/* *.color0:      #1f1f1f */
+/* *.color8:      #d6dbe5 */
+/* *.color1:      #f81118 */
+/* *.color9:      #de352e */
+/* *.color2:      #2dc55e */
+/* *.color10:     #1dd361 */
+/* *.color3:      #ecba0f */
+/* *.color11:     #f3bd09 */
+/* *.color4:      #2a84d2 */
+/* *.color12:     #1081d6 */
+/* *.color5:      #4e5ab7 */
+/* *.color13:     #5350b9 */
+/* *.color6:      #1081d6 */
+/* *.color14:     #0f7ddb */
+/* *.color7:      #d6dbe5 */
+/* *.color15:     #ffffff */
+/* *.colorBD:     #d6dbe5 */
+
+/* ! base16 */
+/* *.color0:       #181818 */
+/* *.color1:       #ab4642 */
+/* *.color2:       #a1b56c */
+/* *.color3:       #f7ca88 */
+/* *.color4:       #7cafc2 */
+/* *.color5:       #ba8baf */
+/* *.color6:       #86c1b9 */
+/* *.color7:       #d8d8d8 */
+/* *.color8:       #585858 */
+/* *.color9:       #ab4642 */
+/* *.color10:      #a1b56c */
+/* *.color11:      #f7ca88 */
+/* *.color12:      #7cafc2 */
+/* *.color13:      #ba8baf */
+/* *.color14:      #86c1b9 */
+/* *.color15:      #f8f8f8 */
+
+
+/* !! solarized */
+/* *.color0:	#073642 */
+/* *.color1:	#dc322f */
+/* *.color2:	#859900 */
+/* *.color3:	#b58900 */
+/* *.color4:	#268bd2 */
+/* *.color5:	#d33682 */
+/* *.color6:	#2aa198 */
+/* *.color7:	#eee8d5 */
+/* *.color9:	#cb4b16 */
+/* *.color8:	#fdf6e3 */
+/* *.color10:	#586e75 */
+/* *.color11:	#657b83 */
+/* *.color12:	#839496 */
+/* *.color13:	#6c71c4 */
+/* *.color14:	#93a1a1 */
+/* *.color15:	#fdf6e3 */
+
+/* !! xterm */
+/* *.color0:   #000000 */
+/* *.color1:   #cd0000 */
+/* *.color2:   #00cd00 */
+/* *.color3:   #cdcd00 */
+/* *.color4:   #0000cd */
+/* *.color5:   #cd00cd */
+/* *.color6:   #00cdcd */
+/* *.color7:   #e5e5e5 */
+/* *.color8:   #4d4d4d */
+/* *.color9:   #ff0000 */
+/* *.color10:  #00ff00 */
+/* *.color11:  #ffff00 */
+/* *.color12:  #0000ff */
+/* *.color13:  #ff00ff */
+/* *.color14:  #00ffff */
+/* *.color15:  #aabac8 */
+
+
+
