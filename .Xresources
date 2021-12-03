@@ -48,7 +48,7 @@ st.alpha: 1
 st.alphaOffset: 0
 
 !!font 
-st.font: SourceCodePro-11;
+st.font: SourceCodePro-10;
 
 ! st.termname: st-256color
 ! st.borderpx: 2
@@ -174,4 +174,103 @@ st.font: SourceCodePro-11;
 /* *.color15:  #aabac8 */
 
 
+!--------------------
+!URxvt
+!--------------------
+!urxvt color scheme:
 
+URxvt*background: #2B2B2B
+URxvt*foreground: #DEDEDE
+
+!URxvt*colorUL: #86a2b0
+
+! black
+!URxvt*color0  : #2E3436
+!URxvt*color8  : #555753
+! red
+!URxvt*color1  : #CC0000
+!URxvt*color9  : #EF2929
+! green
+!URxvt*color2  : #4E9A06
+!URxvt*color10 : #8AE234
+! yellow
+!URxvt*color3  : #C4A000
+!URxvt*color11 : #FCE94F
+! blue
+!URxvt*color4  : #3465A4
+!URxvt*color12 : #729FCF
+! magenta
+!URxvt*color5  : #75507B
+!URxvt*color13 : #AD7FA8
+! cyan
+!URxvt*color6  : #06989A
+!URxvt*color14 : #34E2E2
+! white
+!URxvt*color7  : #D3D7CF
+!URxvt*color15 : #EEEEEC
+
+
+! to match gnome-terminal "Linux console" scheme
+! foreground/background
+!URxvt*background: #000000
+!URxvt*foreground: #ffffff
+! black
+URxvt.color0  : #000000
+URxvt.color8  : #555555
+! red
+URxvt.color1  : #AA0000
+URxvt.color9  : #FF5555
+! green
+URxvt.color2  : #00AA00
+URxvt.color10 : #55FF55
+! yellow
+URxvt.color3  : #AA5500
+URxvt.color11 : #FFFF55
+! blue
+URxvt.color4  : #0000AA
+URxvt.color12 : #5555FF
+! magenta
+URxvt.color5  : #AA00AA
+URxvt.color13 : #FF55FF
+! cyan
+URxvt.color6  : #00AAAA
+URxvt.color14 : #55FFFF
+! white
+URxvt.color7  : #AAAAAA
+
+
+!urxvt fonts:
+
+URxvt*font: xft:Monospace:pixelsize=12
+URxvt*boldFont: xft:Monospace:bold:pixelsize=12
+
+
+!urxvt extensions:
+
+URxvt.perl-ext-common:  default,matcher,tabbedex
+
+!enabling clickable links:
+
+URxvt.urlLauncher:      /usr/bin/firefox
+URxvt.matcher.button:   1
+
+!urxvt scrolling options and cursor style:
+
+URxvt*saveLines: 12000
+URxvt*scrollstyle:plain
+URxvt*scrollBar: false
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+
+! urxvt tabs settings:
+
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 2
+URxvt.tabbed.tab-bg: 8
+URxvt.tabbed.autohide:  yes
+URxvt.tabbed.new-button:  no
+URxvt.tabbed.title: no
+
+urxvt*transparent: true
+urxvt*shading: 30

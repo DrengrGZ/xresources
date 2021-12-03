@@ -16,10 +16,10 @@ export HISTCONTROL=ignoreboth:erasedups
 
 # Make nano the default editor
 
-export EDITOR='nvim'
-export VISUAL='nvim'
+#export EDITOR='nvim'
+#export VISUAL='nvim'
 
-PS1='\W\$ '
+PS1='[\w] \$ '
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
@@ -34,26 +34,34 @@ bind "set completion-ignore-case on"
 
 #troll alias
 alias poweroff="echo "jaja""
+alias yes="echo "jaja""
+
+#experimental alias
+alias temp="bash /home/drengr/Documents/testing/cputemp.sh"
 
 #random alias
 alias q="exit"
 alias off="shutdown now"
-alias update="sudo pacman -Syyu"
-alias p="sudo pacman"
+alias update="doas pacman -Syyu"
+alias p="pacman"
 alias ..="cd .."
 alias matrix="cmatrix -s -C"
 alias ipp="curl ip.me"
-alias fuck="sudo killall"
-alias cpu="sudo auto-cpufreq --monitor"
+alias fuck="doas killall"
+alias cpu="doas auto-cpufreq --monitor"
 alias vi="nvim"
-alias uf="./.config/ufetch/ufetch-arch"
-alias nf="neofetch"
-alias t="tmux"
+alias list="pacman -Qqe"
+
+#emacs
+alias emacsd="/usr/bin/emacs --daemon &"
+alias emacsc="emacsclient -c -a 'emacs'"
+
 #ssh alias
 alias sshlab="ssh 192.168.39.175 -l drengr"
 alias sshubuntusri="ssh 192.168.0.122 -l drengr"
 alias sshkali="ssh 192.168. -l drengr"
-
+alias sshxubuntu="ssh 192.168.61.223 -l user"
+alias sshtest="ssh 192.168.63.175 -l anon"
 #vmalias
 alias lab-start="vboxmanage startvm LAB --type headless"
 alias lab-save="vboxmanage controlvm LAB savestate"
@@ -61,8 +69,12 @@ alias ubuntusri-start="vboxmanage startvm UBUNTUSERVER-SRI --type headless"
 alias ubuntusri-save="vboxmanage controlvm UBUNTUSERVER-SRI savestate"
 alias kali-start="vboxmanage startvm KALI_ --type headless"
 alias kali-open="vboxmanage startvm KALI_"
+alias xubuntu-start="vboxmanage startvm XUBUNTUSERVER --type headless"
+alias xubuntu-save="vboxmanage controlvm XUBUNTUSERVER savestate"
 alias kali-save="vboxmanage controlvm KALI_ savestate"
-
+alias test-start="vboxmanage startvm TEST --type headless"
+alias test-save="vboxmanage controlvm TEST savestate"
+alias test-open="vboxmanage startvm TEST"
 #list
 alias ls='lsd --color=auto'
 alias la='lsd -a'
@@ -174,9 +186,24 @@ shopt -s dotglob
 shopt -s histappend # do not overwrite history
 shopt -s expand_aliases # expand aliases
 
+#youtube-dl
+alias yta-aac="youtube-dl --extract-audio --audio-format aac "
+alias yta-best="youtube-dl --extract-audio --audio-format best "
+alias yta-flac="youtube-dl --extract-audio --audio-format flac "
+alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
+alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
+alias yta-opus="youtube-dl --extract-audio --audio-format opus "
+alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
+alias yta-wav="youtube-dl --extract-audio --audio-format wav "
+
+alias ytv-best="youtube-dl -f bestvideo+bestaudio "
+
 #Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
+
+#iso and version used to install ArcoLinux
+alias iso="cat /etc/dev-rel | awk -F '=' '/ISO/ {print $2}'"
 
 #Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
@@ -239,6 +266,9 @@ alias sr="sudo reboot"
 #update betterlockscreen images
 alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 
+#give the list of all installed desktops - xsessions desktops
+alias xd="ls /usr/share/xsessions"
+
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
 ex ()
@@ -266,6 +296,18 @@ ex ()
   fi
 }
 
+#arcolinux applications
+alias att="arcolinux-tweak-tool"
+alias adt="arcolinux-desktop-trasher"
+alias abl="arcolinux-betterlockscreen"
+alias agm="arcolinux-get-mirrors"
+alias amr="arcolinux-mirrorlist-rank-info"
+alias aom="arcolinux-osbeck-as-mirror"
+alias ars="arcolinux-reflector-simple"
+alias atm="arcolinux-tellme"
+alias avs="arcolinux-vbox-share"
+alias awa="arcolinux-welcome-app"
+
 #remove
 alias rmgitcache="rm -r ~/.cache/git"
 
@@ -283,7 +325,7 @@ alias personal='cp -Rf /personal/* ~'
 # install screenfetch
 #screenfetch
 # install ufetch-git
-.config/ufetch/ufetch-arch | lolcat
+.config/ufetch/ufetch-arch | lolcat -S 25
 # install ufetch-arco-git
 #ufetch-arco
 # install arcolinux-paleofetch-git
